@@ -8,6 +8,8 @@
         <hr />
         <form name="newEventForm">
             <fieldset>
+                <label for="eventId">Id:</label>
+                <input type="text" id="eventId" required ng-model="event.id" placeholder="Id of event..." />
                 <label for="eventName">Event Name:</label>
                 <input type="text" id="eventName" required ng-model="event.name" placeholder="Name of your event..." />
                 <label for="eventDate">Event Date:</label>
