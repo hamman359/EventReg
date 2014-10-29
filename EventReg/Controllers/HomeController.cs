@@ -41,5 +41,15 @@ namespace EventReg.Controllers
 			return View();
 		}
 
+		public ActionResult CacheSample()
+		{
+			return View();
+		}
+
+		public ActionResult CompileSample()
+		{
+			return View();
+		}
+
 	}
 }

@@ -6,7 +6,7 @@ using System.Web;
 namespace EventReg.Models {
 
 	public class Session {
-
+		public int id { get; set; }
 		public string name { get; set; }
 		public string creatorName { get; set; }
 		public int duration { get; set; }

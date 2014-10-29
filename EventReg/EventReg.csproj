@@ -203,6 +203,8 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Css\Site.css" />
     <Content Include="Scripts\App\app.js" />
+    <Content Include="Scripts\App\controllers\CacheSampleController.js" />
+    <Content Include="Scripts\App\controllers\CompileSampleController.js" />
     <Content Include="Scripts\App\controllers\EditEventController.js" />
     <Content Include="Scripts\App\controllers\EditProfileController.js" />
     <Content Include="Scripts\App\controllers\EventController.js" />
@@ -1030,6 +1032,8 @@
     <Content Include="Scripts\Libraries\respond.min.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\Home\EditProfile.cshtml" />
+    <Content Include="Views\Home\CacheSample.cshtml" />
+    <Content Include="Views\Home\CompileSample.cshtml" />
     <None Include="Views\Home\NewEvent.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
