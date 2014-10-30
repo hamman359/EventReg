@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "Locale Sample";
+}
+
+<div ng-controller="LocaleSampleController">
+    <h3>{{myDate | date:myFormat}}</h3>
+</div>
+
+@section scripts {
+    <script src="~/Scripts/Libraries/angular/i18n/angular-locale_es.js"></script>
+}

@@ -51,5 +51,15 @@ namespace EventReg.Controllers
 			return View();
 		}
 
+		public ActionResult LocaleSample()
+		{
+			return View();
+		}
+
+		public ActionResult TimeoutSample()
+		{
+			return View();
+		}
+
 	}
 }

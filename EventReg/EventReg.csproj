@@ -208,8 +208,11 @@
     <Content Include="Scripts\App\controllers\EditEventController.js" />
     <Content Include="Scripts\App\controllers\EditProfileController.js" />
     <Content Include="Scripts\App\controllers\EventController.js" />
+    <Content Include="Scripts\App\controllers\LocaleSampleController.js" />
+    <Content Include="Scripts\App\controllers\TimeoutSampleController.js" />
     <Content Include="Scripts\App\filters.js" />
     <Content Include="Scripts\App\services\EventData.js" />
+    <Content Include="Scripts\App\services\ExceptionHandler.js" />
     <Content Include="Scripts\App\services\GravatarUrlBuilder.js" />
     <Content Include="Scripts\Libraries\angular\angular-animate.js" />
     <Content Include="Scripts\Libraries\angular\angular-animate.min.js" />
@@ -1034,6 +1037,7 @@
     <Content Include="Views\Home\EditProfile.cshtml" />
     <Content Include="Views\Home\CacheSample.cshtml" />
     <Content Include="Views\Home\CompileSample.cshtml" />
+    <Content Include="Views\Home\LocaleSample.cshtml" />
     <None Include="Views\Home\NewEvent.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -1074,6 +1078,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Scripts\Libraries\angular\version.json" />
+    <Content Include="Views\Home\TimeoutSample.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
