@@ -1,8 +1,8 @@
 ﻿eventsApp.factory('eventData', function ($http, $resource) {
-	var resource = $resource('/api/event/:id', {id : '@id'});
+    var resource = $resource('/api/event/:id', { id: '@id' }, { "getAll": { method: "GET", isArray: true } });
 	return {
-		getEvent: function () {
-			return resource.get({ id: 1 });
+		getEvent: function (eventId) {
+			return resource.get({ id:eventId });
 
 			//var deferred = $q.defer();
 			//$http({method: 'GET', url: '/api/event/1'})
@@ -18,6 +18,9 @@
 		save: function (event) {
 			return resource.save(event);
 
+		},
+		getAllEvents: function () {
+		    return resource.query();
 		}
 	};
 

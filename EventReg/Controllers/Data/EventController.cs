@@ -34,5 +34,24 @@ namespace EventReg.Controllers.Data {
 
 			return true;
 		}
+
+		public EventInstance[] GetAll()
+		{
+			var path = ConfigurationManager.AppSettings["DataFolder"];
+
+			var events = new List<EventInstance>();
+
+			string[] files = Directory.GetFiles(path, "*.json");
+
+			foreach (string file in files)
+			{
+				string json = System.IO.File.ReadAllText(file);
+
+				events.Add(JsonConvert.DeserializeObject<EventInstance>(json));
+			}
+
+			return events.ToArray();
+		}
+
 	}
 }

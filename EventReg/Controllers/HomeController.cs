@@ -10,7 +10,7 @@ namespace EventReg.Controllers
 	{
 		public ActionResult Index()
 		{
-			return RedirectToAction("EventDetails");
+			return View();
 		}
 
 		public ActionResult About()
@@ -57,6 +57,11 @@ namespace EventReg.Controllers
 		}
 
 		public ActionResult TimeoutSample()
+		{
+			return View();
+		}
+
+		public ActionResult CookieStoreSample()
 		{
 			return View();
 		}

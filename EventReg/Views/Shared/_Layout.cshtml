@@ -6,19 +6,19 @@
 	<title>Event Registration</title>
 	@Styles.Render("~/Content/css")
 	@Scripts.Render("~/bundles/modernizr")
-
+    <base href="@Url.Content("~")">
 </head>
 <body>
 	<div class="container">
 		<div class="navbar">
 			<div class="navbar-inner">
 				<ul class="nav">
-					<li>@Html.ActionLink("Create Event", "NewEvent", "Home")</li>
+					<li><a href="/newEvent">Create Event</a></li>
 				</ul>
 			</div>
 		</div>
 
-		@RenderBody()
+        <ng-view>@RenderBody()</ng-view>
 
 	</div>
 

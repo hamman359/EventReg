@@ -26,7 +26,8 @@ namespace EventReg
 			bundles.Add(new ScriptBundle("~/bundles/angular").Include(
 					  "~/Scripts/Libraries/angular/angular.js",
 					  "~/Scripts/Libraries/angular/angular-resource.js",
-					  "~/Scripts/Libraries/angular/angular-route.js"));
+					  "~/Scripts/Libraries/angular/angular-route.js",
+					  "~/Scripts/Libraries/angular/angular-cookies.js"));
 
 			bundles.Add(new ScriptBundle("~/bundles/eventreg")
 				.Include("~/Scripts/App/*.js")

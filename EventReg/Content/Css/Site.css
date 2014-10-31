@@ -37,3 +37,7 @@ select, textarea {
 input.ng-dirty.ng-invalid {
 	background-color: pink;
 }
+
+.hoverwell:hover {
+	background-color: #808080;
+}

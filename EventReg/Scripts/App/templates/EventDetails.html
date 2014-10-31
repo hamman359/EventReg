@@ -1,9 +1,7 @@
-﻿@{
-	ViewBag.Title = "Event Registration";
-}
-<div ng-controller="EventController">
-    <img alt="{{event.name}}" ng-src="{{event.imageUrl}}" />
-    @*<button class="btn btn-primary" type="button" ng-click="scrollToSession()">Scroll</button>*@
+﻿<div>
+    <img alt="{{event.name}} image" ng-src="{{event.imageUrl}}" />
+    <!--<button class="btn btn-primary" type="button" ng-click="scrollToSession()">Scroll</button>-->
+    <!--<button class="btn btn-primary" type="button" ng-click="reload()">Reload</button>-->
     <div class="row">
         <div class="spann11">
             <h2 ng-bind-template="{{event.name | uppercase}} {{event.date}}"></h2>

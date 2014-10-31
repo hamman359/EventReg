@@ -205,15 +205,18 @@
     <Content Include="Scripts\App\app.js" />
     <Content Include="Scripts\App\controllers\CacheSampleController.js" />
     <Content Include="Scripts\App\controllers\CompileSampleController.js" />
+    <Content Include="Scripts\App\controllers\CookieStoreSampleController.js" />
     <Content Include="Scripts\App\controllers\EditEventController.js" />
     <Content Include="Scripts\App\controllers\EditProfileController.js" />
     <Content Include="Scripts\App\controllers\EventController.js" />
+    <Content Include="Scripts\App\controllers\EventListController.js" />
     <Content Include="Scripts\App\controllers\LocaleSampleController.js" />
     <Content Include="Scripts\App\controllers\TimeoutSampleController.js" />
     <Content Include="Scripts\App\filters.js" />
     <Content Include="Scripts\App\services\EventData.js" />
     <Content Include="Scripts\App\services\ExceptionHandler.js" />
     <Content Include="Scripts\App\services\GravatarUrlBuilder.js" />
+    <Content Include="Scripts\App\templates\EventList.html" />
     <Content Include="Scripts\Libraries\angular\angular-animate.js" />
     <Content Include="Scripts\Libraries\angular\angular-animate.min.js" />
     <Content Include="Scripts\Libraries\angular\angular-aria.js" />
@@ -1038,7 +1041,9 @@
     <Content Include="Views\Home\CacheSample.cshtml" />
     <Content Include="Views\Home\CompileSample.cshtml" />
     <Content Include="Views\Home\LocaleSample.cshtml" />
-    <None Include="Views\Home\NewEvent.cshtml" />
+    <Content Include="Views\Home\CookieStoreSample.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\App\templates\NewEvent.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1052,7 +1057,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\EventDetails.cshtml" />
+    <Content Include="Scripts\App\templates\EventDetails.html" />
     <Content Include="Scripts\Libraries\jquery\jquery-1.10.2.min.map" />
     <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
