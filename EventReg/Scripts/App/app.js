@@ -36,8 +36,11 @@ var eventsApp = angular.module('eventsApp', ['ngResource', 'ngCookies', 'ngRoute
             });
         $routeProvider.when('/directiveControllerSample',
             {
-                templateUrl: '/scripts/app/templates/DirectiveControllerSample.html',
-                //controller: 'SampleDirectiveController'
+                templateUrl: '/scripts/app/templates/DirectiveControllerSample.html'
+            });
+        $routeProvider.when('/directiveCompileSample',
+            {
+                templateUrl: '/scripts/app/templates/DirectiveCompileSample.html'
             });
         $routeProvider.otherwise({ redirectTo: '/events' });
         $locationProvider.html5Mode(true);
