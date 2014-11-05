@@ -24,6 +24,16 @@ var eventsApp = angular.module('eventsApp', ['ngResource', 'ngCookies', 'ngRoute
                     }
                 }
             });
+        $routeProvider.when('/editProfile',
+            {
+                templateUrl: '/scripts/app/templates/editProfile.html',
+                controller: 'EditProfileController'
+            });
+        $routeProvider.when('/sampleDirective',
+            {
+                templateUrl: '/scripts/app/templates/SampleDirective.html',
+                controller: 'SampleDirectiveController'
+            });
         $routeProvider.otherwise({ redirectTo: '/events' });
         $locationProvider.html5Mode(true);
     });

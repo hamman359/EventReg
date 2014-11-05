@@ -1,0 +1,270 @@
+AngularJs
+------------
+https://github.com/joeeames/AngularFundamentalsFiles
+MV* framework
+Opinionated
+gettingreal.37signals.com/ch04_Make_opinionated_software.php
+Angularjs.org
+
+MV*
+Open Source (Google)
+Comprehensive
+Testable
+	- Unit
+	- End-to-end (integration)
+Extends HTML Vocabulary
+Forward Thinking
+	- Web Components (www.w3.org/TR/components-intro/)
+	- Object.observe (wiki.ecmascript.org.doku.php?id=harmony:observe)
+
+Angular Architecture
+----
+Two-way binding
+Dirty Checking
+Dependency Injection
+
+
+Angular Components
+---------
+Controllers
+Views/Directives
+Services
+
+
+Event Reg
+------------
+List of Angular Events
+Event Details
+Create New Events & Sessions
+Edit Events & Sessions
+Login
+Server
+
+
+Controller's primary responsibility is to create the Scope.
+
+Data passes from the controller to the scope back and forth to the View
+
+Scope - Exposes the Model to the View, but is not the model.
+
+Model is the Data that is put into the scope. The Model can be modified by methods on the Scope (i.e. triggered by events) or by two-way bindings.
+
+
+Directives
+---------------
+a way to give HTML new functionality.
+
+
+Types:
+- tag (e.g. <ng-form />)
+- tag attibute (e.g. <div ng-form />)
+- class (e.g. <div class="ng-form" />)
+- HTML comment
+
+Not all directives can be used in all 4 forms
+
+Built-in:
+- Event Directives
+-- ngClick
+-- ngDoubleClick
+-- ngMousedown
+-- ngMouseenter
+-- ngMouseleave
+-- ngMousemove
+-- ngMouseover
+-- ngMouseup
+-- ngChange
+--- e.g. <input type="checkbox" ng-change="handleChange()" ng-model="property" /> (Requires the ng-model directive to be present.
+- Other Directives
+-- ngApp
+
+-- Bind Directives
+--- ngBind - replaces expression syntax (e.g. <h2 ng-bind="event.name"></h2>)
+--- ngBindTemplate - similar to ngBind, but allows expression syntax for multiple values. (e.g. <h2 ng-bind-template="{{event.name}} {{event.date}}"></h2>)
+--- ngBindHtml (in angular-sanitize.js, part of angular-seed. modules will have a dependancy on angular-sanitize module) (e.g. <div ng-bind-html="snippet">some title</div> 'snippet' needs to be defined in controller) will 'clean' HTML and remove potentially unsafe attributes. 
+--- ngBindHtmlUnsafe - Same as ngBindHtml but does not strip potentially unsafe items. Should only be used if you completely trust the HTML source as it opens up to attacks such as XSS.
+
+-- ngShow - shows an element based on a condition
+-- ngHide - hides an element based on a condition
+-- ngCloak - helps avoid falsh from unbound directives. Hides portion of the page until Angular has run. Allows you to replace bindings/directives with actual values to be displayed prior to showing them. Goes on <body> and requires CSS rule (definition found in the Angular docs.)
+
+-- Style Directives
+--- ngStyle - sets a style based on a CSS command provided in a condition
+--- ngClass - similar to ngStyle but for classes instead of arbitary styles.
+--- ngClassEven - just like ngClass but used in ngRepeat and only works on even elements
+--- ngClassOdd - just like ngClass but used in ngRepeat and only works on odd elements
+
+-- Valueless Attribute values (e.g. disabled)
+--- ngDisabled
+--- ngChecked
+--- ngMultiple
+--- ngReadonly
+--- ngSelected
+
+-- Form Directives
+--- ngForm - allows you to create smaller sections of forms and nest them
+-- ngSubmit - allows you to call a method on your form if the form is submitted. It does not matter how the form was submitted (i.e. button click or pressing enter)
+
+-- ngHref - allows you to set an anchor tags href to an angular binding
+-- ngSrc - allows you to set an img  tags src to an angular binding
+
+-- ngNonBindable - specifies an area that tells Angular not to bind things within that element
+
+
+IE Restrictions
+----------------
+For Older Versions of IE
+- Ployfill JSON.stringify
+- Avoid custom tag names when writing directives
+
+
+Expressions
+-------------
+Javascript-like code snippets. Wrapped in {{ }}
+NOT full javascript engine. i.e. cannot use javascript method calls like MATH.floor()
+
+
+Filters
+-------------
+For modifying output
+Can be used for 3 main things
+- Formatting (e.g. making strings upper case)
+- Sorting Datasets 
+- Filtering Datasets
+
+Usage: {{ expression | filter }}
+
+Built-in Filters
+------------------
+- uppercase
+- lowercase
+- number
+- currency
+- date
+- json - mostly used for debuging.
+
+-- ngRepeat Filters
+--- orderBy
+--- limitTo
+--- filter
+
+Custom Filters
+-----------
+module.filter('name', function() {
+	return function(input /*, filter parameters */) {
+		// modify input
+		return modifiedOutput;
+	}
+});
+
+
+Two-Way bindings
+----------------------
+ngModel
+- input
+- select
+- textarea
+
+<input type="text" ng-model="object.property" />
+<input type="text" ng-model="property" />
+<input type="text" ng-model="object.container.property" />
+
+
+Services
+----------------
+Worker object
+Not Necessarily Over-the-Wire
+Often Stateless
+
+Built-In Services
+Custom Services
+
+
+Why use?
+- Encapsulate reusable logic to be shared through out app
+- Break down logic into smaller reusable parts
+- Dependency Injection
+- Testable
+
+Built-In Services
+----------------
+$http - 
+$resource
+	- get
+	- save
+	- array
+	- remove
+	- delete
+$q
+	- Promises Library
+$anchorScroll
+$cacheFactory
+$compile
+$parse
+$locale
+$timeout
+$exceptionHandler
+$filter
+$cookieStore
+$interpolate
+	- Used internally by Angular
+	module.config(function($interpolateProvider) {
+		$interpolateProvider
+			.startSymbol('[[').endSymbol(']]')
+	});
+$log
+	- used for diagnostic logging
+	- $log.log()
+	- $log.info()
+	- $log.warn()
+	- $log.error()
+$rootScope
+	- One per App
+	- used when a new scope is created
+	- prototypal inheritance for $scope to inherit from $rootScope- Avoid as a Best Practice
+	- injectable
+	
+$window
+	- gives access to the window javascript object
+	- used for mocking window in unit tests
+$document
+	- gives access to the document javascript object
+	- used for mocking window in unit tests
+$rootElement
+	- access to the element that you put your app directive on
+	
+	- Best practice to not use DOM services to directly manipulate the DOM, best to use directives.
+
+$route
+$routeParams
+$location
+$httpBackend
+$controller
+
+
+Routing
+----------
+
+
+Directives
+----------
+Web Components
+
+Uses
+- Custom Elements
+- Custom Events
+- Observe and React to Changes on the Model
+
+'A' - Attribute
+	<div my-sample></div>
+'E' - Element
+	<my-sample />
+'C' - Class
+	<div class="my-sample" />
+'M' - Comment
+	<!-- my-sample -->   ????
+	
+& - passing in a method
+= - passing in a property
+@ - passing in a stringify
+
